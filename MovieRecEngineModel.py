@@ -12,10 +12,12 @@ data['comb'] = data['actor_1_name'] + ' ' + data['actor_2_name'] + ' ' + data['a
 
 
 # creating a count matrix
+# CountVectorizer = Convert a collection of text documents to a matrix of token counts.
 cv = CountVectorizer()
 count_matrix = cv.fit_transform(data['comb'])
 
 # creating a similarity score matrix
+# cosine_similarity = Compute cosine similarity between samples in X and Y.
 sim = cosine_similarity(count_matrix)
 
 # saving the similarity score matrix in a file for later use
